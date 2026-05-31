@@ -89,7 +89,9 @@ class Biblioteca {
                 return;
             }
         }
-        System.out.println("Libro no encontrado o ya estaba disponible");
+        System.out.println(
+            "Libro no encontrado o ya estaba disponible".concat("mundo")
+        );
     }
 
     public void mostrarCatalogo() {
