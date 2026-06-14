@@ -88,7 +88,7 @@ class ProcesosGenerales {
                     System.out.print(" ");
                 }
             }
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++){ 
                 if (tipo) {
                     System.out.print("[" + EstadoAsientos[i][j] + "]");
                 } else {
@@ -158,7 +158,7 @@ class ProcesosGenerales {
             }
         } else if (EquilibrioAvion[1] > EquilibrioAvion[0]) {
             for (int i = indice_externo; i < indice_interno; i++) {
-                for (int j = 3; j < 6; j++) {
+                for (int j = 0; j < 3; j++) {
                     if (Nuevo_estado[i][j].equals("L")) {
                         mayor = EstadoAsientos[i][j];
                         Cambio_estado(mayor, EstadoAsientos, Nuevo_estado);
@@ -168,7 +168,7 @@ class ProcesosGenerales {
             }
         } else if (EquilibrioAvion[0] == EquilibrioAvion[1]) {
             for (int i = indice_externo; i < indice_interno; i++) {
-                for (int j = 3; j < 6; j++) {
+                for (int j = 0; j < 6; j++) {
                     if (Nuevo_estado[i][j].equals("L")) {
                         mayor = EstadoAsientos[i][j];
                         Cambio_estado(mayor, EstadoAsientos, Nuevo_estado);
