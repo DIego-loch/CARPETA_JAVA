@@ -8,6 +8,7 @@ public class form {
 
     private static String[] titulos = Tabla.Columnas();
     private JButton btnAgregar, btnMostrar, btnEliminar, btnActualizar;
+    private DefaultTableModel tabla;
 
     public form() {
         Formulario();
@@ -33,7 +34,6 @@ public class form {
         presentacion.setFont(new Font("Arial", Font.BOLD, 24));
         panel.add(presentacion);
         panel.add(Botones());
-        panel.add(TablaDatos());
         panel.add(TablaDatos());
         return panel;
     }
@@ -64,10 +64,30 @@ public class form {
     }
 
     public JScrollPane TablaDatos() {
-        DefaultTableModel tabla = new DefaultTableModel(titulos, 0);
+        tabla = new DefaultTableModel(titulos, 0);
         JTable DatosGenerales = new JTable(tabla);
         JScrollPane scroll = new JScrollPane(DatosGenerales);
         scroll.setBounds(20, 120, 740, 200);
         return scroll;
+    }
+
+    public JButton getbtnAgregar() {
+        return btnAgregar;
+    }
+
+    public JButton getbtnMostrar() {
+        return btnMostrar;
+    }
+
+    public JButton getbtnEliminar() {
+        return btnEliminar;
+    }
+
+    public JButton getbtnActualizar() {
+        return btnActualizar;
+    }
+
+    public DefaultTableModel setTabla() {
+        return tabla;
     }
 }

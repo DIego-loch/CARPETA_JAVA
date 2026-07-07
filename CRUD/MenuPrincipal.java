@@ -1,8 +1,10 @@
+import Controlador.*;
 import Vista.*;
 
 class MenuPrincipal {
 
     public static void main(String[] args) {
-        new form();
+        form vista = new form();
+        controlador controlado = new controlador(vista);
     }
 }
